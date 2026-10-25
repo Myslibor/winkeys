@@ -5,7 +5,7 @@ keyboard hook (`WH_KEYBOARD_LL`).
 
 ## Install
 
-    go get github.com/yourname/winkeys
+    go get github.com/Myslibor/winkeys
 
 ## Listen to key events
 
