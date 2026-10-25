@@ -10,6 +10,12 @@ type kbdllHookStruct struct {
 	ExtraInfo uintptr
 }
 
+const (
+        WM_KEYDOWN    = 0x0100
+        WM_SYSKEYDOWN = 0x0104
+        LLKHF_INJECTED = 0x10
+)
+
 func hookCallback(nCode int32, wparam uintptr, lparam uintptr) (uintptr, uintptr, error) {
 	if nCode >= 0 {
 		kb := (*kbdllHookStruct)(unsafe.Pointer(lparam))

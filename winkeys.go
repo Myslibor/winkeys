@@ -23,6 +23,12 @@ var (
 const iNPUT_KEYBOARD = 1
 const kEYEVENTF_KEYUP = 0x0002
 
+type Event struct {
+	VK       uint16
+	Down     bool
+	Injected bool // if true key is not physical :}
+}
+
 func KeyDown(vk uint16) {
 	sendKey(vk, false)
 }
